@@ -4,6 +4,6 @@
     "tailwindcss": "^4.1.17"
   },
   "scripts": {
-    "dev": "bunx  @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "dev": "bunx  @tailwindcss/cli -i ./src/input.css -o ./output.css --watch"
   }
 }

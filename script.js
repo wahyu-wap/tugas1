@@ -28,8 +28,8 @@ function renderSurahList(list, current) {
       <div class="flex items-center gap-1 cursor-pointer">
         <span class="text-sm h-8 w-8 font-medium ${
           surah.number != current
-            ? "border border-blue-600 text-blue-600"
-            : "bg-blue-600 text-white"
+            ? "border border-amber-600 text-amber-600"
+            : "bg-amber-600 text-white"
         } rounded-md flex justify-center items-center">
           ${surah.number}
         </span>
@@ -66,9 +66,9 @@ function renderAyat(surahData) {
   const versesHTML = surahData.verses
     .map(
       (verse, index) => `
-      <div class="space-y-3 bg-blue-50 p-5 rounded-xl shadow-sm border border-blue-100">
+      <div class="space-y-3 bg-amber-50 p-5 rounded-xl shadow-sm border border-amber-100">
         <div class="flex justify-between items-center">
-          <span class="uppercase tracking-widest font-semibold text-xs text-blue-600">
+          <span class="uppercase tracking-widest font-semibold text-xs text-amber-600">
             Ayat ${verse.number.inSurah}
           </span>
           <audio
@@ -83,7 +83,7 @@ function renderAyat(surahData) {
           ${verse.text.arab}
         </h2>
 
-        <p class="text-blue-950 text-sm leading-relaxed">
+        <p class="text-amber-950 text-sm leading-relaxed">
           ${verse.translation.id}
         </p>
       </div>`
