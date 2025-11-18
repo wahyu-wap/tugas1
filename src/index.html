@@ -1,20 +1,94 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-  <title>kelompok anjing</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./output.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap"
+    rel="stylesheet"
+  />
+  <title>Qalam</title>
+</head>  <!-- content -->
+<div class="flex relative h-full z-10 overflow-hidden">
+
+    <!-- sidebar content -->
+    <div
+      id="sidebar"
+      class="min-w-[280px] w-[280px] max-w-full md:translate-x-0 -translate-x-72 px-8 bg-white mt-14 py-6 space-y-1 border-r fixed bottom-0 top-0 overflow-x-auto transition-all duration-300 z-10"
+    >
+
+    <!-- search form -->
+      <div class="flex gap-2 items-center flex-wrap md:hidden">
+        <form class="search">
+          <input
+            class="border py-1.5 px-3 rounded-md focus:outline-none ring ring-transparent ring-offset-2 focus:ring-blue-600 w-full mb-5"
+            placeholder="Cari surah.."
+            type="search"
+          />
+        </form>
+      </div>
+
+      <!-- surah list -->
+      <div id="surah-list" class="space-y-1">
+        <p class="font-medium text-lg text-center">Mohon Tunggu . . .</p>
+      </div>
+    </div>
+
+    <!-- main content -->
+    <div id="main-content" class="px-8 mt-14 py-6 w-full md:ml-[280px] flex flex-col justify-between overflow-y-auto h-[calc(100vh-39px-0.5rem)] z-5">
+        <div>
+            <div id="surah-header" class="space-y-2 mb-4">
+                <h1 class="text-2xl font-bold text-gray-800"></h1>
+                <p class="text-gray-600"></p>
+            </div>
+            <div id="ayat-list" class="space-y-8">
+                <p class="font-medium text-lg text-center">Mohon Tunggu . . .</p>
+            </div>
+        </div>
+    </div>
 </head>
 <body class="overflow-hidden h-full">
  <div class="overflow-hidden h-screen relative">
+
+
    <!-- navbar -->
     <div class="px-8 py-2 flex justify-between items-center border-b fixed top-0 inset-x-0 bg-white z-50">
 <!-- app name -->
- <a href="/" class="text-xl font-black md:order-1 order-2 text-gray-800"></a>
- kalam
+ <a href="/" class="text-xl font-black md:order-1 order-2 text-gray-800">Qalam</a>
+ <!-- search form -->
+ <div class="md:flex gap-2 order-2 items-center hidden">
+  <form method="" class="search" action="">
+    <input
+      class="border py-1.5 px-3 rounded-md focus:outline-none ring ring-transparent ring-offset-2 focus:ring-blue-600 search-input"
+      placeholder="Cari surah.."
+      type="search"
+    />
+  </form>
+</div>
     </div>
+
+     <!-- sidebar toggle -->
+     <button
+     id="sidebar-toggle"
+     class="order-1 bg-blue-600 p-2 rounded-md focus:outline-none ring ring-transparent ring-offset-2 focus:ring-blue-600 md:hidden"
+   >
+     <svg
+       xmlns="http://www.w3.org/2000/svg"
+       width="24"
+       height="24"
+       viewBox="0 0 24 24"
+       class="text-white"
+     >
+       <path
+         fill="currentColor"
+         d="M4 18q-.425 0-.712-.288T3 17t.288-.712T4 16h16q.425 0 .713.288T21 17t-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7t.288-.712T4 6h16q.425 0 .713.288T21 7t-.288.713T20 8z"
+       />
+     </svg>
+   </button>
  </div>
-  </h1>
+  
 </body>
 </html>
